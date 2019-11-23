@@ -19,25 +19,27 @@
     </ul>
     <script>
         let usuario = prompt("Cuál es tu peso?");
+        let planeta = parseInt(prompt("Elige tu planeta: \n 1 es Marte \n 2 es Jupiter"));
         let peso = parseInt(usuario);
+        let nombre = "";
 
         const g_tierra = 9.8;
         const g_marte = 3.7;
         const g_jupiter = 24.8;
 
-        let peso_final_marte;
+        let peso_final;
         
-        peso_final_marte = peso * g_marte / g_tierra;
-        peso_final_marte = parseInt(peso_final_marte);
-        document.write("Tu peso en Marte es <strong>" + peso_final_marte + "kg</strong><br/>");
-
-        /*
-        let peso_final_jupiter;
-        
-        peso_final_jupiter = peso * g_jupiter / g_tierra;
-        peso_final_jupiter = parseInt(peso_final_jupiter);
-        document.write("Tu peso en Jupiter es <strong>" + peso_final_jupiter + "kg</strong><br/>");
-        */
+        if(planeta === 1) {
+            peso_final = parseInt(peso * g_marte / g_tierra);
+            nombre = "Marte";
+        } else if (planeta === 2) {      
+            peso_final = parseInt(peso * g_jupiter / g_tierra);
+            nombre = "Jupiter";
+        } else {
+            peso_final = parseInt(peso * 978469);
+            nombre = "Krypton";
+        }
+        document.write("Tu peso en " + nombre + " es <strong>" + peso_final + "kg</strong><br/>");
 
     </script>
 </body>

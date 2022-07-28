@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tu Peso en un lugar donde pesas menos</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tu Peso en un lugar donde pesas menos / Eleccion</title>
     <style>
-    body {
+      html {
+        background-color: #333;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+      body {
         text-align: center;
-    }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Tu peso en otro planeta</h1>
+    <h6>Elección planeta</h6>
     <p>En la tierra pesas distinto que en Marte o Jupiter</p>
     <ul>
-        <li>La gravedad en la tierra es de 9.8mt/s</li>
+      <li>La gravedad en la tierra es de 9.8mt/s</li>
+      <li>La gravedad en marte es de 3.7mt/s</li>
+      <li>La gravedad en jupiter es de 24.8mt/s</li>
     </ul>
     <script>
-        let usuario = prompt("Cuál es tu peso?");
-        let planeta = parseInt(prompt("Elige tu planeta: \n 1 es Marte \n 2 es Jupiter"));
-        let peso = parseInt(usuario);
-        let nombre = "";
+      let usuario = prompt('Cuál es tu peso?')
+      let planeta = parseInt(
+        prompt('Elige tu planeta: \n 1 es Marte \n 2 es Jupiter')
+      )
+      let peso = parseInt(usuario)
+      let nombre = ''
 
-        const g_tierra = 9.8;
-        const g_marte = 3.7;
-        const g_jupiter = 24.8;
+      const g_tierra = 9.8
+      const g_marte = 3.7
+      const g_jupiter = 24.8
 
-        let peso_final;
-        
-        if(planeta === 1) {
-            peso_final = parseInt(peso * g_marte / g_tierra);
-            nombre = "Marte";
-        } else if (planeta === 2) {      
-            peso_final = parseInt(peso * g_jupiter / g_tierra);
-            nombre = "Jupiter";
-        } else {
-            peso_final = parseInt(peso * 978469);
-            nombre = "Krypton";
-        }
-        document.write("Tu peso en " + nombre + " es <strong>" + peso_final + "kg</strong><br/>");
+      let peso_final
 
+      if (planeta === 1) {
+        peso_final = parseInt((peso * g_marte) / g_tierra)
+        nombre = 'Marte'
+      } else if (planeta === 2) {
+        peso_final = parseInt((peso * g_jupiter) / g_tierra)
+        nombre = 'Jupiter'
+      } else {
+        peso_final = parseInt(peso * 978469)
+        nombre = 'Krypton'
+      }
+      document.write(
+        'Tu peso en ' +
+          nombre +
+          ' es <strong>' +
+          peso_final +
+          'kg</strong><br/>'
+      )
     </script>
-</body>
+  </body>
 </html>

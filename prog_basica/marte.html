@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tu Peso en un lugar donde pesas menos</title>
     <style>
-    body {
+      html {
+        background-color: #333;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+      body {
         text-align: center;
-    }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Tu peso en otro planeta</h1>
     <p>En la tierra pesas distinto que en Marte o Jupiter</p>
     <ul>
-        <li>La gravedad en la tierra es de 9.8mt/s</li>
+      <li>La gravedad en la tierra es de 9.8mt/s</li>
+      <li>La gravedad en marte es de 3.7mt/s</li>
+      <li>La gravedad en jupiter es de 24.8mt/s</li>
     </ul>
     <script>
-        let usuario = prompt("Cuál es tu peso?");
-        let peso = parseInt(usuario);
+      let usuario = prompt('Cuál es tu peso?')
+      let peso = parseFloat(usuario)
 
-        const g_tierra = 9.8;
-        const g_marte = 3.7;
-        const g_jupiter = 24.8;
+      const g_tierra = 9.8
+      const g_marte = 3.7
+      const g_jupiter = 24.8
 
-        let peso_final_marte;
-        
-        peso_final_marte = peso * g_marte / g_tierra;
-        peso_final_marte = parseInt(peso_final_marte);
-        document.write("Tu peso en Marte es <strong>" + peso_final_marte + "kg</strong><br/>");
+      let peso_final_marte
+      let peso_final_jupiter
 
-        /*
+      peso_final_marte = (peso * g_marte) / g_tierra
+      peso_final_marte = parseInt(peso_final_marte)
+      peso_final_jupiter = (peso * g_jupiter) / g_tierra
+      peso_final_jupiter = parseInt(peso_final_jupiter)
+      document.write(
+        'Tu peso en la Tierra es <b>' +
+          peso +
+          'kg</b><br/>' +
+          'Tu peso en Marte es <b>' +
+          peso_final_marte +
+          'kg</b><br/>' +
+          'Tu peso en Jupiter es <b>' +
+          peso_final_jupiter +
+          'kg</b><br/>'
+      )
+
+      /*
         let peso_final_jupiter;
         
         peso_final_jupiter = peso * g_jupiter / g_tierra;
         peso_final_jupiter = parseInt(peso_final_jupiter);
         document.write("Tu peso en Jupiter es <strong>" + peso_final_jupiter + "kg</strong><br/>");
         */
-
     </script>
-</body>
+  </body>
 </html>

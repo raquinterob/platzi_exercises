@@ -6,4 +6,4 @@ let calcularEdad = function(){
     //document.write(edad);
     return(edad);
 };
-console.log(calcularEdad());
+console.log(calcularEdad()); 

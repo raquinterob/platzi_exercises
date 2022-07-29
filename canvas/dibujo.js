@@ -1,7 +1,7 @@
 let d = document.getElementById("dibujito");
 let lienzo = d.getContext("2d");
 
-dibujarLinea("black",10,300,220,10);
+dibujarLinea("red",10,300,220,10);
 dibujarLinea("gray",310,10,10,220);
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
@@ -43,7 +43,7 @@ function dibujarLinea2(color, xinicial, yinicial, xfinal, yfinal) {
 
 let d3 = document.getElementById("dibujito3");
 let lienzo3 = d3.getContext("2d");
-let h3 = 180;
+let h3 = 270;
 let colorLineas3 = "hsl("+h3+",100%,50%)";
 let lineas3 = 40;
 let yi3, xf3;
@@ -58,9 +58,11 @@ for(l3 = 0; l3 < lineas3; l3++) {
     colorLineas3 = "hsl("+h3+",100%,50%)";
 
     yi3 = 10 * l3;
-    xf3 = 10 * (l3 + 1); 
-    dibujarLinea3(colorLineas3,0,yi3,xf3,400);
-    dibujarLinea3(colorLineas3,xf3,0,399,yi3);
+    xf3 = 10 * (l3 + 1);
+    dibujarLinea3(colorLineas3,1,yi3,xf3,399);
+    dibujarLinea3(colorLineas3,1,(399 - yi3),xf3,1);
+    dibujarLinea3(colorLineas3,xf3,1,399,yi3);
+    dibujarLinea3(colorLineas3,xf3,399,399,(399 - yi3));
 }
 
 function dibujarLinea3(color, xinicial, yinicial, xfinal, yfinal) {

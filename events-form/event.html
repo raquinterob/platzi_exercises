@@ -1,25 +1,31 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Eventos - Formulario</title>
     <style>
-        html {
-          background-color: #333;
-          color: white;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-            sans-serif;
-        }
-        body {
-          text-align: center;
-        }
+      html {
+        background-color: #333;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+      body {
+        text-align: center;
+      }
+      #respuesta {
+        color: chartreuse;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Eventos - Formulario</h1>
-    <p>Así queda tu dibujo 3:</p>
-    <canvas width="400" height="400" id="dibujito3"></canvas>
-    
+    <form>
+      <label for="nacimiento">Cuantos años tienes?</label>
+      <input type="number" id="nacimiento" />
+      <input type="button" id="btnEnviar" value="Enviar" />
+    </form>
+    <p id="respuesta"></p>
     <script src="event.js"></script>
-</body>
+  </body>
 </html>

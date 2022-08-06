@@ -51,11 +51,11 @@ footer a {
     flex-direction: row-reverse;
 }
 aside {
-    width: 30%;
+    width: 35%;
     padding: 20px 5%;
 }
 main {
-    width: 70%;
+    width: 65%;
     padding: 0 5%;
 }
 article {

@@ -12,8 +12,6 @@ let nuevaPosicionX = 0
 let nuevaPosicionY = 0
 
 let posicion = miCanvas.getBoundingClientRect()
-// correccionX = posicion.x;
-// correccionY = posicion.y;
 correccionX = posicion.x
 correccionY = posicion.y
 
@@ -34,7 +32,7 @@ miCanvas.height = 600
 function empezarDibujo() {
   pintarLinea = true
   lineas.push([])
-  console.log(nuevaPosicionX)
+  //console.log(nuevaPosicionX)
 }
 
 /**
@@ -42,8 +40,8 @@ function empezarDibujo() {
  */
 function guardarLinea() {
   lineas[lineas.length - 1].push({
-    x: nuevaPosicionX - miCanvas.offsetLeft,
-    y: nuevaPosicionY - miCanvas.offsetTop,
+    x: nuevaPosicionX,
+    y: nuevaPosicionY,
   })
 }
 

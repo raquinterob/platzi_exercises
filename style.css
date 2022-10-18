@@ -1,3 +1,6 @@
+:root {
+    --primary-color: darkcyan;
+}
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +8,17 @@
     font-family: 'Raleway', sans-serif;
 }
 html {
+    font-size: 62.5%;
     color-scheme: dark !important;
+}
+body {
+    font-size: 1.4rem;
+}
+ul {
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin-bottom: 1.5rem;
 }
 html, body {
     background-color: #181a1b;
@@ -14,13 +27,16 @@ html, body {
 header {
     width: 100%;
     height: 100px;
-    color: cadetblue;
+    color: var(--primary-color);
     background-color: black;
     padding: 20px 5%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+header h1, header h4, footer h4 {
+    margin-bottom: 0;
 }
 header nav ul li {
     display: inline;
@@ -54,6 +70,9 @@ aside {
     width: 35%;
     padding: 20px 5%;
 }
+aside li {
+    margin-bottom: 0.5rem;
+}
 main {
     width: 65%;
     padding: 0 5%;
@@ -75,6 +94,10 @@ article figure img {
 }
 article figure figcaption {
     text-align: center;
-    font-size: 0.8em;
-    color: #aaa
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 1rem;
+}
+article ul {
+    margin-left: 2rem;
 }

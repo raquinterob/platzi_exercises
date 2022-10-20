@@ -42,10 +42,10 @@ header nav ul li {
     display: inline;
     padding-left: 10px;
 }
-nav a, nav a:visited {
+nav.menu a, nav.menu a:visited {
     color: deepskyblue;
 }
-nav a:hover {
+nav.menu a:hover {
     color:indianred;
 }
 footer {

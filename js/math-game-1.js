@@ -8,19 +8,19 @@ fondo.addEventListener('load', dibujar)
 
 function dibujar() {
   lienzo.drawImage(fondo, 0, 0)
+  vaca.addEventListener('load', dibujarVacas)
+  cerdo.addEventListener('load', dibujarCerdos)
+  pollo.addEventListener('load', dibujarPollos)
 }
 
 let vaca = new Image()
 vaca.src = 'images/vaca.png'
-vaca.addEventListener('load', dibujarVacas)
 
 let cerdo = new Image()
 cerdo.src = 'images/cerdo.png'
-cerdo.addEventListener('load', dibujarCerdos)
 
 let pollo = new Image()
 pollo.src = 'images/pollo.png'
-pollo.addEventListener('load', dibujarPollos)
 
 function dibujarVacas() {
   let cantidad = aleatorio(1, 4)

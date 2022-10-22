@@ -2,12 +2,12 @@ let d = document.getElementById('map-area')
 let lienzo = d.getContext('2d')
 
 let fondo = {
-  url: '/images/tile.png',
+  url: '//resources.rqdigital.co/img/granja/tile.png',
   cargaOK: false,
 }
 
 let vaca = {
-  url: 'images/vaca.png',
+  url: '//resources.rqdigital.co/img/granja/vaca.png',
   cargaOK: false,
   cantidad: aleatorio(1, 4),
   x: [],
@@ -15,7 +15,7 @@ let vaca = {
 }
 
 let cerdo = {
-  url: '/images/cerdo.png',
+  url: '//resources.rqdigital.co/img/granja/cerdo.png',
   cargaOK: false,
   cantidad: aleatorio(1, 6),
   x: [],
@@ -23,7 +23,7 @@ let cerdo = {
 }
 
 let pollo = {
-  url: 'images/pollo.png',
+  url: '//resources.rqdigital.co/img/granja/pollo.png',
   cargaOK: false,
   cantidad: aleatorio(1, 8),
   x: [],
@@ -31,7 +31,7 @@ let pollo = {
 }
 
 let scarecrow = {
-  url: 'images/scarecrow.png',
+  url: '//resources.rqdigital.co/img/granja/scarecrow.png',
   cargaOK: false,
   x: aleatorio(0, 420),
   y: aleatorio(0, 420),

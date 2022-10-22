@@ -139,7 +139,7 @@ function redibujar() {
     }
 
     for (let i = 0; i < cerdo.cantidad; i++) {
-      lienzo.drawImage(cerdo.imagen,cerdo.x[i], cerdo.y[i])
+      lienzo.drawImage(cerdo.imagen, cerdo.x[i], cerdo.y[i])
     }
 
     for (let i = 0; i < pollo.cantidad; i++) {

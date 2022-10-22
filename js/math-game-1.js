@@ -10,24 +10,24 @@ let vaca = {
   url: 'images/vaca.png',
   cargaOK: false,
   cantidad: aleatorio(1, 4),
-  x: aleatorio(0, 420),
-  y: aleatorio(0, 420),
+  x: [],
+  y: [],
 }
 
 let cerdo = {
   url: '/images/cerdo.png',
   cargaOK: false,
   cantidad: aleatorio(1, 6),
-  x: aleatorio(0, 420),
-  y: aleatorio(0, 420),
+  x: [],
+  y: [],
 }
 
 let pollo = {
   url: 'images/pollo.png',
   cargaOK: false,
   cantidad: aleatorio(1, 8),
-  x: aleatorio(0, 420),
-  y: aleatorio(0, 420),
+  x: [],
+  y: [],
 }
 
 let scarecrow = {
@@ -93,21 +93,57 @@ function dibujar() {
     lienzo.drawImage(fondo.imagen, 0, 0)
 
     for (let i = 0; i < vaca.cantidad; i++) {
-      let x = aleatorio(0, 420)
-      let y = aleatorio(0, 420)
-      lienzo.drawImage(vaca.imagen, vaca.x, vaca.y)
+      vaca.x[i] = aleatorio(0, 420)
+      vaca.y[i] = aleatorio(0, 420)
+      lienzo.drawImage(vaca.imagen, vaca.x[i], vaca.y[i])
     }
 
     for (let i = 0; i < cerdo.cantidad; i++) {
-      let x = aleatorio(0, 420)
-      let y = aleatorio(0, 420)
-      lienzo.drawImage(cerdo.imagen, cerdo.x, cerdo.y)
+      cerdo.x[i] = aleatorio(0, 420)
+      cerdo.y[i] = aleatorio(0, 420)
+      lienzo.drawImage(cerdo.imagen, cerdo.x[i], cerdo.y[i])
     }
 
     for (let i = 0; i < pollo.cantidad; i++) {
-      let x = aleatorio(0, 420)
-      let y = aleatorio(0, 420)
-      lienzo.drawImage(pollo.imagen, pollo.x, pollo.y)
+      pollo.x[i] = aleatorio(0, 420)
+      pollo.y[i] = aleatorio(0, 420)
+      lienzo.drawImage(pollo.imagen, pollo.x[i], pollo.y[i])
+    }
+
+    console.log(
+      'vacas= ' +
+        vaca.cantidad +
+        ' | cerdos= ' +
+        cerdo.cantidad +
+        ' | pollos= ' +
+        pollo.cantidad
+    )
+
+    lienzo.drawImage(scarecrow.imagen, scarecrow.x, scarecrow.y)
+    //console.log('scarecrow.x=' + scarecrow.x + ' scarecrow.y=' + scarecrow.y)
+  }
+}
+
+function redibujar() {
+  if (
+    fondo.cargaOK &&
+    vaca.cargaOK &&
+    cerdo.cargaOK &&
+    pollo.cargaOK &&
+    scarecrow.cargaOK
+  ) {
+    lienzo.drawImage(fondo.imagen, 0, 0)
+
+    for (let i = 0; i < vaca.cantidad; i++) {
+      lienzo.drawImage(vaca.imagen, vaca.x[i], vaca.y[i])
+    }
+
+    for (let i = 0; i < cerdo.cantidad; i++) {
+      lienzo.drawImage(cerdo.imagen,cerdo.x[i], cerdo.y[i])
+    }
+
+    for (let i = 0; i < pollo.cantidad; i++) {
+      lienzo.drawImage(pollo.imagen, pollo.x[i], pollo.y[i])
     }
 
     console.log(
@@ -140,19 +176,19 @@ function moverScarecrow(evento) {
   switch (evento.keyCode) {
     case teclas.LEFT:
       scarecrow.x = scarecrow.x - movimiento
-      dibujar()
+      redibujar()
       break
     case teclas.RIGHT:
       scarecrow.x = scarecrow.x + movimiento
-      dibujar()
+      redibujar()
       break
     case teclas.UP:
       scarecrow.y = scarecrow.y - movimiento
-      dibujar()
+      redibujar()
       break
     case teclas.DOWN:
       scarecrow.y = scarecrow.y + movimiento
-      dibujar()
+      redibujar()
       break
     default:
       console.log('otra tecla')

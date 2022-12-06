@@ -26,6 +26,10 @@
         justify-content: space-around;
         margin: auto;
       }
+      #solicitado {
+        font-size: medium;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -33,10 +37,12 @@
     <h2>ATM Exercise</h2>
     <p>+</p>
     <form>
-      <label for="retiro">Cuanto quieres retirar?</label>
+      <label for="retiro">Ingresa la cantidad a retirar:</label>
       <input id="retiro" type="number" />
       <input id="btnRetirar" type="button" value="Retirar" />
     </form>
+    <p id="solicitado"></p>
+    <p id="respuesta"></p>
     <script src="js/atm-exercise.js"></script>
   </body>
 </html>

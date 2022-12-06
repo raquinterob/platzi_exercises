@@ -18,12 +18,25 @@
       body {
         text-align: center;
       }
+      form {
+        min-height: 100px;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+      }
     </style>
   </head>
   <body>
     <h1>Funciones Matemáticas JavaScript - Game</h1>
     <h2>ATM Exercise</h2>
     <p>+</p>
+    <form>
+      <label for="retiro">Cuanto quieres retirar?</label>
+      <input id="retiro" type="number" />
+      <input id="btnRetirar" type="button" value="Retirar" />
+    </form>
     <script src="js/atm-exercise.js"></script>
   </body>
 </html>

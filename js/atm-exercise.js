@@ -1,4 +1,9 @@
-//Disponibilidad de Billetes del ATM
+// Valor de cada Billete ATM
+let v50 = 50
+let v20 = 20
+let v10 = 10
+
+// Cantidad de Billetes del ATM
 let c50 = 3
 let c20 = 2
 let c10 = 2
@@ -14,36 +19,35 @@ function retirar() {
 
   document.getElementById('solicitado').innerText = '$' + totalParcial
 
-  let b50 = parseInt(retiro / 50)
+  let b50 = parseInt(retiro / v50)
   if (c50 < b50) {
     b50 = c50
   }
-  totalParcial = retiro - b50 * 50
-  console.log(b50 + ' Billetes de 50 // Restante ' + totalParcial)
+  totalParcial = retiro - b50 * v50
+  console.log(b50 + ' Billetes de ' + v50 + ' // Restante ' + totalParcial)
 
-  let b20 = parseInt(totalParcial / 20)
+  let b20 = parseInt(totalParcial / v20)
   if (c20 < b20) {
     b20 = c20
   }
-  totalParcial = totalParcial - b20 * 20
-  console.log(b20 + ' Billetes de 20 // Restante ' + totalParcial)
+  totalParcial = totalParcial - b20 * v20
+  console.log(b20 + ' Billetes de ' + v20 + ' // Restante ' + totalParcial)
 
-  let b10 = parseInt(totalParcial / 10)
-  totalParcial = totalParcial - b10 * 10
+  let b10 = parseInt(totalParcial / v10)
+  totalParcial = totalParcial - b10 * v10
   if (c10 < b10) {
     b10 = c10
-    console.log(b10 + ' Billetes de 10 // Restante ' + totalParcial)
+    console.log(b10 + ' Billetes de ' + v10 + ' // Restante ' + totalParcial)
     mensaje = 'No tengo suficiente dinero'
-  } else if (totalParcial % 10 !== 0) {
+  } else if (totalParcial % v10 !== 0) {
     mensaje = 'No tengo billetes de baja denominación, solo múltiplos de 10'
   } else {
-    console.log(b10 + ' Billetes de 10 // Restante ' + totalParcial)
+    console.log(b10 + ' Billetes de ' + v10 + ' // Restante ' + totalParcial)
     mensaje = 'Toma tu platica!! $' + retiro
   }
 
   respuesta.innerText = mensaje
   console.log('-----')
-
 }
 
 /*

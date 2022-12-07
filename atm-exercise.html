@@ -26,6 +26,12 @@
         justify-content: space-around;
         margin: auto;
       }
+      p,
+      ul {
+        max-width: 500px;
+        margin: 20px auto;
+        text-align: left;
+      }
       #solicitado {
         font-size: medium;
         font-weight: bold;
@@ -35,7 +41,23 @@
   <body>
     <h1>Funciones Matemáticas JavaScript - Game</h1>
     <h2>ATM Exercise</h2>
-    <p>+</p>
+    <p
+      >Ejercicio de Cajero automático, el objetivo consistia en tener la opcion
+      de billetes de diferente cantidades y denominaciones y que el usuario
+      pueda retirar el dinero que desee.
+    </p>
+    <ul
+      ><li>Entregar el dinero con la menor cantidad de billetes posible</li>
+      <li
+        >Mostrar error si no hay la cantidad de dinero disponible o la minima
+        denominacion</li
+      >
+      <li
+        >Reducir la cantidad de billetes disponibles cada vez que se hace un
+        retiro</li
+      >
+      <li>En consola se imprimen algunos logs para llevar el conteo de billetes y otros</i>
+    </ul>
     <form>
       <label for="dineroUsuario">Ingresa la cantidad a retirar:</label>
       <input id="dineroUsuario" type="number" />

@@ -16,7 +16,6 @@ function dibujarOnClickInicial(evento) {
   clickInicialX = evento.clientX - canvaPositionLeft
   clickInicialY = evento.clientY - canvaPositionTop
   return
-
 }
 
 function dibujarOnClickFinal(evento) {
@@ -25,7 +24,14 @@ function dibujarOnClickFinal(evento) {
 
   colorLinea = 'hsl(' + i + ',100%,50%)'
 
-  dibujarLinea(colorLinea, clickInicialX, clickInicialY, clickFinalX, clickFinalY, lienzo)
+  dibujarLinea(
+    colorLinea,
+    clickInicialX,
+    clickInicialY,
+    clickFinalX,
+    clickFinalY,
+    lienzo
+  )
   i += hueChange
   //console.log(evento)
   //console.log(canva)

@@ -11,7 +11,7 @@ class Pakiman {
     alert(this.nombre)
   }
   mostrar() {
-    document.getElementById("mapa").appendChild(this.imagen)
+    document.getElementById('mapa').appendChild(this.imagen)
     document.write('<div class="pakiman-data">')
     document.write('<p><strong>' + this.nombre + '</strong><br/>')
     document.write('<i>Salud = </i>' + this.vida + '<br/>')

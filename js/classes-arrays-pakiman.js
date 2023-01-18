@@ -14,6 +14,7 @@ coleccion.push(new Pakiman('Tocinauro', 120, 40, 'Magia'))
 
 console.log(coleccion)
 
-for (let i of coleccion) { //in itera el indice - of itera obejtos
+for (let i of coleccion) {
+  //in itera el indice - of itera obejtos
   i.mostrar()
 }
